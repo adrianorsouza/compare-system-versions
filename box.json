@@ -15,11 +15,18 @@
             "in": "vendor"
         },
         {
-            "exclude": ["tests", "_build"],
+            "exclude": [
+                "tests",
+                "_build",
+                "scripts",
+                "node_modules"
+            ],
             "in": "./"
         }
     ],
     "blacklist": [
+        "package.json",
+        "package-lock.json",
         "api.php",
         "box.json",
         "config.yaml",
