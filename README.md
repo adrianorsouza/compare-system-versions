@@ -21,7 +21,7 @@ Create a fresh composer project then install this project.
 
 Download the latest release `csv.phar`.
 
-    curl -IL https://github.com/adrianorsouza/compare-system-versions
+    curl -OL https://github.com/adrianorsouza/compare-system-versions/releases/download/0.1.0/csv.phar
 
 ## Config
 
