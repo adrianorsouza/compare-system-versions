@@ -1,6 +1,4 @@
 {
-    "output": "csv.phar",
-    "chmod": "0755",
     "compactors": [
         "KevinGH\\Box\\Compactor\\Php",
         "KevinGH\\Box\\Compactor\\PhpScoper",
@@ -27,8 +25,8 @@
         "config.yaml",
         "phpcs.xml",
         "phpunit.xml",
-        "README.md"
+        "README.md",
+        "CHANGELOG.md"
 
-    ],
-    "stub": true
+    ]
 }
