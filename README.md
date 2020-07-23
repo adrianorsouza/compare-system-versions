@@ -21,7 +21,9 @@ Create a fresh composer project then install this project.
 
 Download the latest release `csv.phar`.
 
-    curl -OL https://github.com/adrianorsouza/compare-system-versions/releases/download/0.1.0/csv.phar
+    curl -Lo csv https://github.com/adrianorsouza/compare-system-versions/releases/download/0.1.0/csv.phar
+    chmod +x csv
+    sudo mv csv /usr/local/bin/
 
 ## Config
 
@@ -64,7 +66,7 @@ iterator:
 
 options:
   title: System Versions Compare
-  build_dir: _build/
+  build_dir: public/
 ```
 
 ## Usage
