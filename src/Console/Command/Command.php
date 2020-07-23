@@ -3,6 +3,7 @@
 namespace Adrianorosa\Csv\Console\Command;
 
 use Adrianorosa\Csv\Parser;
+use Carbon\Carbon;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -132,14 +133,16 @@ abstract class Command extends \Symfony\Component\Console\Command\Command
     public function update()
     {
         $this->store['packages']['latest'] = $this->config->getPackageVersionsLatest();
+        $this->store['updated_at'] = Carbon::now();
         $build_dir = trim($this->config->getOptions('build_dir'), '/');
 
         $filename = getcwd() . DIRECTORY_SEPARATOR . $build_dir . '/data.json';
         $filesystem = new Filesystem();
 
         try {
-            $filesystem->remove(dirname($filename));
-            $filesystem->mkdir(dirname($filename));
+            if (!$filesystem->exists($filename)) {
+                $filesystem->mkdir(dirname($filename));
+            }
             file_put_contents($filename, json_encode($this->store, JSON_PRETTY_PRINT));
         } catch (\Exception $e) {
             $this->output->writeln("<bg=green;fg=white> {$e->getMessage()}</>");
