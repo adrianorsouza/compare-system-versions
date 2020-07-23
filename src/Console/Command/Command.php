@@ -143,7 +143,12 @@ abstract class Command extends \Symfony\Component\Console\Command\Command
             if (!$filesystem->exists($filename)) {
                 $filesystem->mkdir(dirname($filename));
             }
+
             file_put_contents($filename, json_encode($this->store, JSON_PRETTY_PRINT));
+
+            // Copy the client front-end to the build dir
+            $filesystem->mirror(BASE_DIR . DIRECTORY_SEPARATOR . 'html' . DIRECTORY_SEPARATOR, $build_dir);
+
         } catch (\Exception $e) {
             $this->output->writeln("<bg=green;fg=white> {$e->getMessage()}</>");
         }
