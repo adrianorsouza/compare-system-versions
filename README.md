@@ -3,7 +3,12 @@ Compare System Versions
 
 Check the versions of the packages and frameworks within project running in production.
 
-This library look up on each project and scan for files `composer.json` and `package.json` to see the versions of its packages installed within the project.
+This library look up on each project and scan for `composer.json` and `package.json` 
+files to check if the versions of its installed  packages are outdated.
+
+[screenshot]: ./screenshot.png "Screenshot"
+
+![Screenshot][screenshot]
 
 ## Setup
 
@@ -21,7 +26,7 @@ Create a fresh composer project then install this project.
 
 Download the latest release `csv.phar`.
 
-    curl -Lo csv https://github.com/adrianorsouza/compare-system-versions/releases/download/0.1.0/csv.phar
+    curl -Lo csv https://github.com/adrianorsouza/compare-system-versions/releases/download/v0.1.0/csv.phar
     chmod +x csv
     sudo mv csv /usr/local/bin/
 

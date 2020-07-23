@@ -25,6 +25,7 @@
         }
     ],
     "blacklist": [
+        "screenshot.png",
         "package.json",
         "package-lock.json",
         "api.php",
