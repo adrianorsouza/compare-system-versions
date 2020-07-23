@@ -22,6 +22,11 @@ const tasks = new releaseTask({
 });
 
 
+/**
+ * TASK PUSH TO GITHUB
+ *
+ * @return Promise
+ * */
 const push = async () => {
   writeLog('TASK push');
   const {stdout, stderr} = exec('git push -u origin master --tags 2>&1');
@@ -30,7 +35,11 @@ const push = async () => {
 };
 
 
-// async function compilePHAR(version, options) {
+/**
+ * TASK compilePHAR
+ *
+ * @return Promise
+ * */
 const compilePHAR = async (version, options) => {
   writeLog('TASK compilePHAR');
   const { stdout, stderr } = await exec('box compile');
