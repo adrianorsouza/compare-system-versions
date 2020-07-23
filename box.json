@@ -1,0 +1,34 @@
+{
+    "output": "csv.phar",
+    "chmod": "0755",
+    "compactors": [
+        "KevinGH\\Box\\Compactor\\Php",
+        "KevinGH\\Box\\Compactor\\PhpScoper",
+        "KevinGH\\Box\\Compactor\\Json"
+    ],
+    "main": "csv.php",
+    "files": [
+        "LICENSE"
+    ],
+    "finder": [
+        {
+            "name": ["*.php", "*.pem*"],
+            "exclude": ["Tests", "tests"],
+            "in": "vendor"
+        },
+        {
+            "exclude": ["tests", "_build"],
+            "in": "./"
+        }
+    ],
+    "blacklist": [
+        "api.php",
+        "box.json",
+        "config.yaml",
+        "phpcs.xml",
+        "phpunit.xml",
+        "README.md"
+
+    ],
+    "stub": true
+}

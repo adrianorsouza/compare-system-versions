@@ -1,0 +1,42 @@
+# Define here manually the system software and package
+# versions as listed below.
+#
+# NOTE: avoid changing keys, update just versions numbers
+# ----------------------------------------------------
+system_versions:
+    latest:
+      php: 7.4.7
+      nginx: 1.18.0
+      mysql: 8.0.20
+      platform: Ubuntu 20.04 LTS (Focal Fossa)
+
+    current:
+      php: 7.3.1
+      nginx: 1.16.0
+      mysql: 8.0.20
+      platform: Ubuntu 18.04 LTS (Bionic Beaver)
+
+package_versions:
+    latest:
+      phpunit: 9.2.0
+      laravel: 7.18.0
+      react: 16.13.1
+      grunt: 1.2.1
+
+iterator:
+  dir: ./tests/Fixtures
+  packages:
+    - composer.lock
+    - package-lock.json
+    - bower.json
+  exclude:
+    - bower_components
+    - node_modules
+    - public
+    - public_html
+    - vendor
+    - compare-system-versions
+
+options:
+  title: System Versions Compare
+  build_dir: _build/
