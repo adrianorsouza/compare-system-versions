@@ -1,14 +1,14 @@
 {
   "name": "compare-system-versions",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compare System Versions",
   "dependencies": {},
   "devDependencies": {
     "release-task": "^1.0.0"
   },
-    "scripts": {
-        "release": "node ./scripts/release.js"
-    },
+  "scripts": {
+    "release": "node ./scripts/release.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adrianorsouza/compare-system-versions.git"
