@@ -1,7 +1,7 @@
 Compare System Versions
 =======================
 
-Check the versions of the packages and frameworks within project running in production.
+Check package and frameworks versions within projects running in production.
 
 This library look up on each project and scan for `composer.json` and `package.json` 
 files to check if the versions of its installed  packages are outdated.
@@ -77,6 +77,10 @@ options:
 ## Usage
 
     php csv.phar update config.yaml
+    
+NOTES ABOUT CONFIG:
+
+- `build_dir` are always relative to the current directory, so don't define it as absolute path.
 
 The code above will scan for projects within `/var/www` dir and get the versions for packages and versions like: 
 
