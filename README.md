@@ -90,6 +90,11 @@ The code above will scan for projects within `/var/www` dir and get the versions
 - ReactJS Framework
 - GruntJS Task Runner
 
+## Develop 
+
+Generate a phar file:
+
+    box compile
 
 ## Author
 
